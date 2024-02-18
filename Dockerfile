@@ -1,7 +1,7 @@
 FROM ruby:2.7
 
-RUN mkdir /var/www
+WORKDIR /var/www
 
-COPY main.rb /var/www
+COPY ./src /var/www
 
-CMD [ "ruby", "/var/www/main.rb" ]
+CMD [ "/bin/bash" ]
